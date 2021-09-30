@@ -1,7 +1,7 @@
 #Language: pt 
 Funcionalidade: checar se o nome do primeiro livro da lista de resultados contem a palavra Syllabus
     Como usuário na aplicação
-    Quero acessar a Amazon e pesquisar na aba livros
+    Quero acessar a Amazon 
     Para validar se o primeiro livro da lista de resultados contem a palavra Syllabus
 
     Cenário: Realizar o acesso, a pesquisa e checagem da lista de resultados da consulta
