@@ -2,7 +2,7 @@
 
 var bearer
 
-describe("Teste de Login SwagLab", () =>{
+describe("Testes de Login SwagLab", () =>{
     beforeEach(() =>{
         cy.visit("https://www.saucedemo.com")
     })
