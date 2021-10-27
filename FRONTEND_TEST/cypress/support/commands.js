@@ -1,8 +1,6 @@
 /// <reference types="cypress" />
 
-///////////////////
-//Comandos de login
-///////////////////
+////Comandos de login
 
 Cypress.Commands.add("login", () => {
 
@@ -28,9 +26,7 @@ Cypress.Commands.add("loginSenhaErrada", () => {
     cy.get("[data-test=error]")
 })
 
-///////////////////////
-//Comandos de Inventory
-///////////////////////
+////Comandos de Inventory
 
 //Seção de ordenação
 
