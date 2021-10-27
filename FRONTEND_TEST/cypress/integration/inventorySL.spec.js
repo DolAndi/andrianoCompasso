@@ -5,7 +5,7 @@ var bearer
 describe("Testes de verificação do funcionamento do Inventory", () =>{
     describe("Teste da realização da seleção de ordenação", () =>{
         it("Deve verificar se funciona corretamente o seletor de ordenação", ()=>{
-            cy.visit("https://www.saucedemo.com")
+            cy.visit(`${Cypress.env("base_url")}`)
             cy.login()
             for (let i = 0; i < 4; i++) {
 
@@ -16,7 +16,7 @@ describe("Testes de verificação do funcionamento do Inventory", () =>{
     describe("Testes de navegação do menu", () =>{
         beforeEach(() =>{
     
-            cy.visit("https://www.saucedemo.com")
+            cy.visit(`${Cypress.env("base_url")}`)
             cy.login()
         })
        

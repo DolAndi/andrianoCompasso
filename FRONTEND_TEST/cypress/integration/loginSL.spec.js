@@ -4,7 +4,7 @@ var bearer
 
 describe("Testes de Login SwagLab", () =>{
     beforeEach(() =>{
-        cy.visit("https://www.saucedemo.com")
+        cy.visit(`${Cypress.env("base_url")}`)
     })
     describe("Teste de Login SwagLab COM sucesso", () =>{
         it("Deve efetuar o login correto", ()=>{
