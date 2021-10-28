@@ -22,4 +22,13 @@ describe("Testes de Login SwagLab", () =>{
             SauceLogin.validacaoLoginErrado()
         })
     })
+
+    describe("Verificação de existência e visibilidade", () => {
+        it("Deve verificar existência e visibilidade do logo SwagLab", () => {
+            SauceLogin.validacaoLogo()
+        })
+        it("Deve verificar existência e visibilidade do login e senha", () => {
+            SauceLogin.validarLoginCredentials()
+        })
+    })
 }) 

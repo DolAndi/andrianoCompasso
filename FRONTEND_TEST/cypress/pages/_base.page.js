@@ -86,6 +86,15 @@ export default class Base {
     cy.get(array).first().should('contain', value)
   }
 
+  static validacaoExistenciaVisibilidade(elemento) {
+    cy.get(elemento).should('exist', { timeout: Cypress.env('global_timeout') })
+    cy.get(elemento).should('be.visible')
+  }
+
+  static validarConteudoDoElemento(elemento, valor) {
+    cy.get(elemento).should('contain', valor)
+  }
+  
   static validarUrl(url){
     cy.url().should('include', url)
   }

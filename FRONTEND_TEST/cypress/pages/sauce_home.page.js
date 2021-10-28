@@ -29,7 +29,7 @@ export default class SauceHome extends Base {
 
     static menuAcessoBurguer () {
         super.clickOnElement(BURGER_MENU)
-        super.clickOnElement(BURGER_MENU_RESET)
+        super.clickOnElement(BURGER_MENU_RESET)      
     }
 
     static menuLogout () {
