@@ -2,34 +2,41 @@
 
 var bearer
 
-describe("Testes de verificação do funcionamento do Inventory", () =>{
-    describe("Teste da realização da seleção de ordenação", () =>{
-        it("Deve verificar se funciona corretamente o seletor de ordenação", ()=>{
-            cy.visit(`${Cypress.env("base_url")}`)
+import SauceHome from "../pages/sauce_home.page"
+
+describe("Testes de verificação do funcionamento do Inventory", () => {
+
+    describe("Teste da realização da seleção de ordenação", () => {
+    
+        it("Deve verificar o funcionamento corretamente da seleção de ordenação", ()=>{
+            SauceHome.acessarSL()
             cy.login()
             for (let i = 0; i < 4; i++) {
+                     SauceHome.organizadorProdutos(i)
+            }
+        }) 
+    })
 
-                cy.selecaoOrdenacao(i)
-                }
-        })   
-    })                
-    describe("Testes de navegação do menu", () =>{
+    describe("Testes de navegação do menu", () => {
         beforeEach(() =>{
     
-            cy.visit(`${Cypress.env("base_url")}`)
+            SauceHome.acessarSL()
             cy.login()
         })
        
-        it("Deve verificar funcionamento do burguer menu", ()=>{
-            cy.get("#react-burger-menu-btn").click();
+        it("Deve verificar funcionamento do burguer menu", () => {
+            SauceHome.menuBurguer()
         })
 
-        it("Deve verificar o burguer menu na aba Logout", ()=>{
-           cy.menuLogout()
+        it("Deve verificar o burguer menu na aba Logout", () => {
+            SauceHome.menuLogout()
         })
     
-        it("Deve verificar o burguer menu na aba Sobre", ()=>{
-            cy.menuSobre()
+        it("Deve verificar o burguer menu na aba Sobre", () => {
+            SauceHome.menuSobre()
+        })
+        it("Deve verificar o burguer menu do All Items ", () => {
+            SauceHome.menuAllItems()
         })
     
     })

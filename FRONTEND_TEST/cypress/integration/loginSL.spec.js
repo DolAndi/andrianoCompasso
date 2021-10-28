@@ -2,21 +2,24 @@
 
 var bearer
 
+import SauceLogin from "../pages/sauce_login.page"
+
 describe("Testes de Login SwagLab", () =>{
     beforeEach(() =>{
         cy.visit(`${Cypress.env("base_url")}`)
     })
+
     describe("Teste de Login SwagLab COM sucesso", () =>{
         it("Deve efetuar o login correto", ()=>{
-            cy.login()
+            SauceLogin.login("standard_user")
+            SauceLogin.validacaoUrl()
         })
     })
+
     describe("Teste de Login SwagLab SEM sucesso", () =>{
         it("Deve efetuar o login com usuário incorreto", ()=>{
-            cy.loginUsuarioErrado()
-        })
-        it("Deve efetuar o login com senha incorreta", ()=>{
-            cy.loginSenhaErrada()
+            SauceLogin.login("cleitinho_user")
+            SauceLogin.validacaoLoginErrado()
         })
     })
 }) 
