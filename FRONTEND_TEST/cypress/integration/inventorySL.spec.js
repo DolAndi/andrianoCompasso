@@ -25,7 +25,7 @@ describe("Testes de verificação do funcionamento do Inventory", () => {
         })
        
         it("Deve verificar funcionamento do burguer menu", () => {
-            SauceHome.menuBurguer()
+            SauceHome.menuAcessoBurguer()
         })
 
         it("Deve verificar o burguer menu na aba Logout", () => {
@@ -41,6 +41,3 @@ describe("Testes de verificação do funcionamento do Inventory", () => {
     
     })
 }) 
-
-
-

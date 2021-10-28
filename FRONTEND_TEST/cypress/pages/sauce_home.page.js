@@ -27,7 +27,7 @@ export default class SauceHome extends Base {
         super.waitElementAndSelectOption(SELETOR_HOME, arrayP)
     }
 
-    static menuBurguer () {
+    static menuAcessoBurguer () {
         super.clickOnElement(BURGER_MENU)
         super.clickOnElement(BURGER_MENU_RESET)
     }
@@ -53,6 +53,5 @@ export default class SauceHome extends Base {
         super.clickOnElement(BURGER_MENU_INVENTORY)
         super.validarUrl(URL)
     }
-
     
 }
